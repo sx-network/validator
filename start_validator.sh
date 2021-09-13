@@ -3,7 +3,7 @@
 EC2_PUBLIC_IP=$1
 NETWORK=$2
 
-FUND_AMOUNT="100000"
+FUND_AMOUNT="200000"
 
 echo "Installing dependencies..."
 echo
@@ -55,7 +55,7 @@ echo "
 	User=$USER
 	Group=$USER
 	WorkingDirectory=/home/$USER/sx-toronto-node
-	ExecStart=/home/$USER/sx-toronto-node/sx-node/main server --data-dir /home/$USER/sx-toronto-node/sx-node/mynode --chain /home/$USER/sx-toronto-node/sx-node/genesis.json --grpc 0.0.0.0:10000 --libp2p 0.0.0.0:10001 --jsonrpc 0.0.0.0:10002 --nat $EC2_PUBLIC_IP
+	ExecStart=/home/$USER/sx-toronto-node/sx-node/main server --data-dir /home/$USER/sx-toronto-node/sx-node/mynode --chain /home/$USER/sx-toronto-node/sx-node/genesis.json --grpc 0.0.0.0:10000 --libp2p 0.0.0.0:10001 --jsonrpc 0.0.0.0:10002 --nat $EC2_PUBLIC_IP --seal
 	[Install]
 	WantedBy=multi-user.target
 " | sudo tee sx-node.service
