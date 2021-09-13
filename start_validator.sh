@@ -3,6 +3,8 @@
 EC2_PUBLIC_IP=$1
 NETWORK=$2
 
+FUND_AMOUNT="100000"
+
 echo "Installing dependencies..."
 echo
 echo
@@ -24,9 +26,21 @@ echo "Initializing validator directory.."
 echo "Public IP            = $EC2_PUBLIC_IP"
 echo
 echo
-read -n 1 -s -r -p "^ Inform an SX Network admin about these fields and press any key to continue!"
+read -n 1 -s -r -p "Please fund the `Public key (address)` above with $FUND_AMOUNT SX and inform an SX Network admin about the 3 fields above. Once this is done, press any key to continue.."
 echo
 echo
+
+## Show private key
+echo
+echo
+echo
+echo "Below is your private key used to access your account. Please make a copy and store this somewhere safe - DO NOT share it with us! Once this is done, press any key to continue.."
+echo
+echo
+echo "----------"
+pk=$(cat mynode/consensus/validator.key)
+echo "Private Key = $pk"
+read -n 1 -s -r -p "----------"
 
 # Create systemd Service File
 cd /etc/systemd/system
@@ -41,7 +55,7 @@ echo "
 	User=$USER
 	Group=$USER
 	WorkingDirectory=/home/$USER/sx-toronto-node
-	ExecStart=/home/$USER/sx-toronto-node/sx-node/main server --data-dir /home/$USER/sx-toronto-node/sx-node/mynode --chain /home/$USER/sx-toronto-node/sx-node/genesis.json --grpc 0.0.0.0:10000 --libp2p 0.0.0.0:10001 --jsonrpc 0.0.0.0:10002 --nat $EC2_PUBLIC_IP --seal
+	ExecStart=/home/$USER/sx-toronto-node/sx-node/main server --data-dir /home/$USER/sx-toronto-node/sx-node/mynode --chain /home/$USER/sx-toronto-node/sx-node/genesis.json --grpc 0.0.0.0:10000 --libp2p 0.0.0.0:10001 --jsonrpc 0.0.0.0:10002 --nat $EC2_PUBLIC_IP
 	[Install]
 	WantedBy=multi-user.target
 " | sudo tee sx-node.service
