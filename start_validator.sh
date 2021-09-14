@@ -26,7 +26,7 @@ echo "Initializing validator directory.."
 echo "Public IP            = $EC2_PUBLIC_IP"
 echo
 echo
-read -n 1 -s -r -p "Please fund the `Public key (address)` above with $FUND_AMOUNT SX and inform an SX Network admin about the 3 fields above. Once this is done, press any key to continue.."
+read -n 1 -s -r -p "Please fund the \`Public key (address)\` above with $FUND_AMOUNT SX and inform an SX Network admin about the 3 fields above. Once this is done, press any key to continue.."
 echo
 echo
 
@@ -54,8 +54,8 @@ echo "
 	RestartSec=1
 	User=$USER
 	Group=$USER
-	WorkingDirectory=/home/$USER/sx-toronto-node
-	ExecStart=/home/$USER/sx-toronto-node/sx-node/main server --data-dir /home/$USER/sx-toronto-node/sx-node/mynode --chain /home/$USER/sx-toronto-node/sx-node/genesis.json --grpc 0.0.0.0:10000 --libp2p 0.0.0.0:10001 --jsonrpc 0.0.0.0:10002 --nat $EC2_PUBLIC_IP --seal
+	WorkingDirectory=/home/$USER/validator
+	ExecStart=/home/$USER/validator/sx-node/main server --data-dir /home/$USER/validator/sx-node/mynode --chain /home/$USER/validator/sx-node/genesis.json --grpc 0.0.0.0:10000 --libp2p 0.0.0.0:10001 --jsonrpc 0.0.0.0:10002 --nat $EC2_PUBLIC_IP --seal
 	[Install]
 	WantedBy=multi-user.target
 " | sudo tee sx-node.service
