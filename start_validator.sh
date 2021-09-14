@@ -23,10 +23,9 @@ go build main.go
 # Initialize validator dir
 echo "Initializing validator directory.."
 ./main ibft init --data-dir mynode && cp ../genesis.json . && chmod +x genesis.json
-echo "Public IP            = $EC2_PUBLIC_IP"
 echo
 echo
-read -n 1 -s -r -p "Please fund the \`Public key (address)\` above with $FUND_AMOUNT SX and inform an SX Network admin about the 3 fields above. Once this is done, press any key to continue.."
+read -n 1 -s -r -p "Please fund the \`Public key (address)\` above with $FUND_AMOUNT SX and inform an SX Network admin about this address in the #validators channel on Discord. Once this is done, press any key to continue.."
 echo
 echo
 
