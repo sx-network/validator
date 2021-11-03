@@ -1,42 +1,42 @@
 {
-  "name": "example",
+  "name": "sx-main",
   "genesis": {
-      "nonce": "0x0000000000000000",
-      "timestamp": "0x0",
-      "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000f858f854944fac0232243d2c863ef7787e0cb9c9118048d60e940cd01b344f086d814c72a8d8195b3349f186eabf9482d4a18c982495594a10311276b02c03df6795759499237fde2a19ccc478e0021bcfb20d1164723a1980c0",
-      "gasLimit": "0x1388",
-      "difficulty": "0x1",
-      "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-      "coinbase": "0x0000000000000000000000000000000000000000",
-      "alloc": {
-          "0x4FAC0232243D2C863EF7787e0cb9c9118048d60e": {
-              "balance": "0x295BE96E640669720000000"
-          }
-      },
-      "number": "0x0",
-      "gasUsed": "0x0",
-      "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    "nonce": "0x0000000000000000",
+    "timestamp": "0x0",
+    "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000f86df8699469963e7772aa82a1ce8b8d068cfd084c9e8cc49d94499a4f181c0d007993c8accd07ac0d9c12480dad9422a859c408da7b86de594a4316adaf47f38442329480415b5bcf19b0759298cb4597d2c8155b2a3baa941a76de6a4853b6d42b32786dc7a17c140a790aed80c0",
+    "gasLimit": "0x500000",
+    "difficulty": "0x1",
+    "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "coinbase": "0x0000000000000000000000000000000000000000",
+    "alloc": {
+      "0x92235A23306Cd342582c80897aD9Cd16edC9a69a": {
+        "balance": "0x33b2e3c9fd0803ce8000000"
+      }
+    },
+    "number": "0x0",
+    "gasUsed": "0x70000",
+    "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
   },
   "params": {
-      "forks": {
-          "homestead": 0,
-          "byzantium": 0,
-          "constantinople": 0,
-          "petersburg": 0,
-          "istanbul": 0,
-          "EIP150": 0,
-          "EIP158": 0,
-          "EIP155": 0
-      },
-      "chainID": 647,
-      "engine": {
-          "ibft": {}
-      }
+    "forks": {
+      "homestead": 0,
+      "byzantium": 0,
+      "constantinople": 0,
+      "petersburg": 0,
+      "istanbul": 0,
+      "EIP150": 0,
+      "EIP158": 0,
+      "EIP155": 0
+    },
+    "chainID": 416,
+    "engine": {
+      "ibft": {}
+    }
   },
   "bootnodes": [
-      "/ip4/3.215.13.226/tcp/10001/p2p/16Uiu2HAm9SX9R9oqi1afyw5Qg1JgNvZfbPwbSEQH5NCBuBNWk8Lh",
-      "/ip4/3.84.231.38/tcp/10001/p2p/16Uiu2HAmGGueWQo4oudvL6uWGXGMorEHvT7GyUtYN4t2yNi6rujU",
-      "/ip4/34.207.228.138/tcp/10001/p2p/16Uiu2HAmJzMKm6c3HUAVzH1oQ6aV3QRzMrEvz5TVtcbvuY2oH54x",
-      "/ip4/204.236.222.207/tcp/10001/p2p/16Uiu2HAmBv5UkctkZK1ui2tMip6XqpykvMnrzDuLGNjN38YDztmW"
+    "/ip4/3.97.59.226/tcp/10001/p2p/16Uiu2HAmNvRtM271id6bkFsKgyjfPKCJqQirnP3DfCByeQqXEAG2",
+    "/ip4/3.99.47.203/tcp/10001/p2p/16Uiu2HAmGyM4BqngjU12BofCa9n6bPtzaHXPTAwczVQ9vcsWkj8y",
+    "/ip4/3.99.60.226/tcp/10001/p2p/16Uiu2HAm56xeXLejiKei7bi3Z6tEShhFhUJnZFxEV35irdZwzVix",
+    "/ip4/15.222.29.145/tcp/10001/p2p/16Uiu2HAm6zzPxfXiGPnWehfAmCx1fgUpvK337bg313coac6B2Lfh"
   ]
 }
