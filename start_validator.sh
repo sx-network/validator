@@ -14,6 +14,7 @@ echo "
 	RestartSec=1
 	User=$USER
 	Group=$USER
+	LimitNOFILE=4096
 	WorkingDirectory=/home/$USER/validator
 	ExecStart=/home/$USER/validator/sx-node/main server --data-dir /home/$USER/validator/sx-node/mynode --chain /home/$USER/validator/sx-node/genesis.json --grpc 0.0.0.0:10000 --libp2p 0.0.0.0:10001 --jsonrpc 0.0.0.0:10002 --nat $EC2_PUBLIC_IP --seal
 	[Install]
