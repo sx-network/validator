@@ -1,7 +1,7 @@
 # Validator
 
-Validator node for SX Network.
+Become a validator for SX Network.
 
 ## Documentation
 
-Latest docs are [here](https://docs.sx.technology/).
+Please visit our docs [here](https://docs.sx.technology/developers/become-a-validator) for instructions on how to run a validator node on SX Network.

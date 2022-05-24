@@ -1,42 +1,50 @@
 {
-  "name": "sx-main",
+  "name": "sx-mainnet",
   "genesis": {
-    "nonce": "0x0000000000000000",
-    "timestamp": "0x0",
-    "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000f86df8699469963e7772aa82a1ce8b8d068cfd084c9e8cc49d94499a4f181c0d007993c8accd07ac0d9c12480dad9422a859c408da7b86de594a4316adaf47f38442329480415b5bcf19b0759298cb4597d2c8155b2a3baa941a76de6a4853b6d42b32786dc7a17c140a790aed80c0",
-    "gasLimit": "0x500000",
-    "difficulty": "0x1",
-    "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "coinbase": "0x0000000000000000000000000000000000000000",
-    "alloc": {
-      "0x92235A23306Cd342582c80897aD9Cd16edC9a69a": {
-        "balance": "0x33b2e3c9fd0803ce8000000"
-      }
-    },
-    "number": "0x0",
-    "gasUsed": "0x70000",
-    "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      "nonce": "0x0000000000000000",
+      "timestamp": "0x0",
+      "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000f882f87e948fb53330b1aea01f6d34faff90e0b7c2797fc3ad94e8d6b3ee50887c131d64065a97ccc786df0ba336943b9ff70bcdf0b459a92fce1abe5a6a713261ba75945ca565e0952c44dbf1986988ba4d10a171d45fb994f273ec063fad05293e0008fd2d1ce48ba5376604944375c17eca2dae72776bae094dec2c7eeb18920180c0",
+      "gasLimit": "0x1312d00",
+      "difficulty": "0x1",
+      "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "coinbase": "0x0000000000000000000000000000000000000000",
+      "alloc": {
+          "0x4FAC0232243D2C863EF7787e0cb9c9118048d60e": {
+              "balance": "0x33b2e3c9fd0803ce8000000"
+          }
+      },
+      "number": "0x0",
+      "gasUsed": "0x70000",
+      "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
   },
   "params": {
-    "forks": {
-      "homestead": 0,
-      "byzantium": 0,
-      "constantinople": 0,
-      "petersburg": 0,
-      "istanbul": 0,
-      "EIP150": 0,
-      "EIP158": 0,
-      "EIP155": 0
-    },
-    "chainID": 416,
-    "engine": {
-      "ibft": {}
-    }
+      "forks": {
+          "homestead": 0,
+          "byzantium": 0,
+          "constantinople": 0,
+          "petersburg": 0,
+          "istanbul": 0,
+          "EIP150": 0,
+          "EIP158": 0,
+          "EIP155": 0
+      },
+      "chainID": 416,
+      "engine": {
+          "ibft": {
+              "type": "PoA"
+          }
+      },
+      "blockGasTarget": 0,
+      "FaultyMode": {
+          "Value": 0
+      }
   },
   "bootnodes": [
-    "/ip4/3.97.59.226/tcp/10001/p2p/16Uiu2HAmNvRtM271id6bkFsKgyjfPKCJqQirnP3DfCByeQqXEAG2",
-    "/ip4/3.99.47.203/tcp/10001/p2p/16Uiu2HAmGyM4BqngjU12BofCa9n6bPtzaHXPTAwczVQ9vcsWkj8y",
-    "/ip4/3.99.60.226/tcp/10001/p2p/16Uiu2HAm56xeXLejiKei7bi3Z6tEShhFhUJnZFxEV35irdZwzVix",
-    "/ip4/15.222.29.145/tcp/10001/p2p/16Uiu2HAm6zzPxfXiGPnWehfAmCx1fgUpvK337bg313coac6B2Lfh"
+    "/dns/validator-1.sx.technology/tcp/10001/p2p/16Uiu2HAmRYg8TwmgFRcP2a5f3FskBKZwD3j2wq3iWtJh5gwdcYuv",
+    "/dns/validator-2.sx.technology/tcp/10001/p2p/16Uiu2HAmAYbpcB42mAbMtQJKjeXYWqHqvS8tSm485KMDjazHQWdE",
+    "/dns/validator-3.sx.technology/tcp/10001/p2p/16Uiu2HAmJUVAsjJwd6ah9JC1xHtwKREwzQHmQMLpoi6pdd4pf5bF",
+    "/dns/validator-4.sx.technology/tcp/10001/p2p/16Uiu2HAm6PeQd5hkLH7CvasuzJWnVgPcmzjZD5Q29bKb1xWXL3nh",
+    "/dns/validator-5.sx.technology/tcp/10001/p2p/16Uiu2HAm81sJYmkYCEu13uYJxP8bMCKQ8Xks7eNKxskBjm5muWYz",
+    "/dns/validator-6.sx.technology/tcp/10001/p2p/16Uiu2HAm4cGCPV28nqTYgyPinsWUZGsze1eYJezNRf5P1RjBBRXm"
   ]
 }
