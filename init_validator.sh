@@ -13,8 +13,8 @@ echo
 sudo apt-get update
 sudo apt-get -y install build-essential
 sudo apt install wget
-wget https://golang.org/dl/go1.18.2.linux-amd64.tar.gz
-sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.18.2.linux-amd64.tar.gz
+wget https://golang.org/dl/go1.17.10.linux-amd64.tar.gz
+sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.17.10.linux-amd64.tar.gz
 echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
 source ~/.profile
 
