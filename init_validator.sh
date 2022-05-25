@@ -11,7 +11,7 @@ echo
 
 # Install dependencies
 sudo apt-get update
-sudo apt-get install build-essential
+sudo apt-get -y install build-essential
 sudo apt install wget
 wget https://golang.org/dl/go1.18.2.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.18.2.linux-amd64.tar.gz
