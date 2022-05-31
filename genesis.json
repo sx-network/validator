@@ -31,6 +31,7 @@
       "chainID": 416,
       "engine": {
           "ibft": {
+              "quorumSizeBlockNum": 2982618,
               "type": "PoA"
           }
       },
