@@ -12,11 +12,10 @@ echo "
 	Type=simple
 	Restart=always
 	RestartSec=1
-  RuntimeMaxSec=604800
 	User=$USER
 	LimitNOFILE=100000
 	WorkingDirectory=/home/$USER/validator
-	ExecStart=/home/$USER/validator/sx-node/main server --data-dir /home/$USER/validator/sx-node/data --chain /home/$USER/validator/sx-node/genesis.json --grpc-address 0.0.0.0:10000 --libp2p 0.0.0.0:10001 --jsonrpc 0.0.0.0:10002 --nat $EC2_PUBLIC_IP --seal
+	ExecStart=/home/$USER/validator/sx-node/main server --data-dir /home/$USER/validator/sx-node/data --chain /home/$USER/validator/sx-node/genesis.json --grpc-address 0.0.0.0:10000 --libp2p 0.0.0.0:10001 --jsonrpc 0.0.0.0:10002 --nat $EC2_PUBLIC_IP --price-limit 1000000000 --gas-price-block-utilization-minimum 0.95 --seal
 	[Install]
 	WantedBy=multi-user.target
 " | sudo tee sx-node.service

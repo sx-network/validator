@@ -40,7 +40,7 @@ At times you might be required by an SX Admin to run your node in safety mode. T
     User=$USER
     LimitNOFILE=100000
     WorkingDirectory=/home/$USER/validator
-    ExecStart=/home/$USER/validator/sx-node/main server --data-dir /home/$USER/validator/sx-node/data --chain /home/$USER/validator/sx-node/genesis.json --grpc-address 0.0.0.0:10000 --libp2p 0.0.0.0:10001 --jsonrpc 0.0.0.0:10002 --nat $EC2_PUBLIC_IP --seal --bootnode-only-sync
+    ExecStart=/home/$USER/validator/sx-node/main server --data-dir /home/$USER/validator/sx-node/data --chain /home/$USER/validator/sx-node/genesis.json --grpc-address 0.0.0.0:10000 --libp2p 0.0.0.0:10001 --jsonrpc 0.0.0.0:10002 --nat $EC2_PUBLIC_IP --price-limit 1000000000 --gas-price-block-utilization-minimum 0.95 --seal --bootnode-only-sync
     [Install]
     WantedBy=multi-user.target
     ```
@@ -53,7 +53,10 @@ At times you might be required by an SX Admin to run your node in safety mode. T
 
 ### Updating to the latest version of sx-node
 
-Coming soon...
+    From within your `sx-node` directory: 
+    ```
+    git pull && make build && sudo systemctl restart sx-node
+    ```
 
 ### Adding monitoring and alerts to your validator's instance
 
