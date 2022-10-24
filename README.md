@@ -9,6 +9,12 @@ Interested in helping out to validate blocks on SX Network? Please visit our doc
 
 Node operators are required to routinely update their validator's version of sx-node, maintain a high uptime (99%), and monitor the health of their instances. This section will evolve over time to include links and how-to guides essential to the duties of a node operator.
 
+### Updating to the latest version of sx-node
+
+From within your `validator` directory: 
+```
+git pull && ./update_validator.sh "$(curl http://checkip.amazonaws.com)"
+```
 ### Running your node in safety mode
 
 At times you might be required by an SX Admin to run your node in safety mode. This mode ensures your validator can only sync up to trusted validators. If asked, please follow the steps below:
@@ -49,13 +55,6 @@ At times you might be required by an SX Admin to run your node in safety mode. T
 
     ```
     sudo systemctl daemon-reload && sudo systemctl restart sx-node
-    ```
-
-### Updating to the latest version of sx-node
-
-    From within your `sx-node` directory: 
-    ```
-    git pull && make build && sudo systemctl restart sx-node
     ```
 
 ### Adding monitoring and alerts to your validator's instance
