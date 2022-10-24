@@ -13,7 +13,7 @@ Node operators are required to routinely update their validator's version of sx-
 
 From within your `validator` directory: 
 ```
-git pull && ./update_validator.sh "$(curl http://checkip.amazonaws.com)"
+git pull && chmod +x update_validator.sh && ./update_validator.sh "$(curl http://checkip.amazonaws.com)"
 ```
 ### Running your node in safety mode
 
