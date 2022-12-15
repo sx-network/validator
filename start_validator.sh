@@ -40,7 +40,9 @@ seal: true
 tx_pool:
   price_limit: 1000000000
 log_level: DEBUG
-gasprice_block_utilization_threshold: 0.95" | sudo tee config.yml
+gasprice_block_utilization_threshold: 0.95
+data_feed:
+  verify_outcome_api_url: https://outcome-reporter.sx.technology/api/outcome" | sudo tee config.yml
 
 # Start systemd Service
 echo "Starting sx-node service..."

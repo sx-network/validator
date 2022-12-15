@@ -31,24 +31,26 @@ At times you might be required by an SX Admin to run your node in safety mode. T
     rm -rf data/blockchain/ data/trie/ data/consensus/snapshots data/consensus/metadata
     ```
 
-3. Add the `--bootnode-only-sync` flag to the sx-node service's systemd file by adding `--bootnode-only-sync` to the end of the line containing `ExecStart=` within `/etc/systemd/system/sx-node.service` and save that file.
+3. Add the `bootnode_only_sync: true` field to the `config.yml` and save that file.
 
-    For example your file might look something like:
+    For example your `config.yml` file might look something like:
 
     ```
-    [Unit]
-    Description=SX Node Service
-    [Service]
-    Type=simple
-    Restart=always
-    RestartSec=1
-    RuntimeMaxSec=604800
-    User=$USER
-    LimitNOFILE=100000
-    WorkingDirectory=/home/$USER/validator
-    ExecStart=/home/$USER/validator/sx-node/main server --data-dir /home/$USER/validator/sx-node/data --chain /home/$USER/validator/sx-node/genesis.json --grpc-address 0.0.0.0:10000 --libp2p 0.0.0.0:10001 --jsonrpc 0.0.0.0:10002 --nat $EC2_PUBLIC_IP --price-limit 1000000000 --gas-price-block-utilization-minimum 0.95 --seal --bootnode-only-sync
-    [Install]
-    WantedBy=multi-user.target
+    chain_config: /home/heisenberg/validator/sx-node/genesis.json
+    data_dir: /home/heisenberg/validator/sx-node/data
+    block_gas_target: 0x3938700
+    grpc_addr: 0.0.0.0:10000
+    jsonrpc_addr: 0.0.0.0:10002
+    network:
+      libp2p_addr: 0.0.0.0:10001
+      nat_addr: 127.0.0.1
+    seal: true
+    tx_pool:
+      price_limit: 1000000000
+    log_level: DEBUG
+    gasprice_block_utilization_threshold: 0.95
+    data_feed:
+      verify_outcome_api_url: https://outcome-reporter.sx.technology/api/outcome
     ```
 
 4. Restart the sx-node service:
