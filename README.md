@@ -44,6 +44,7 @@ At times you might be required by an SX Admin to run your node in safety mode. T
     network:
       libp2p_addr: 0.0.0.0:10001
       nat_addr: 127.0.0.1
+      bootnode_only_sync: true
     seal: true
     tx_pool:
       price_limit: 1000000000
