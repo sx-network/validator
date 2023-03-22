@@ -2,24 +2,21 @@
 
 EC2_PUBLIC_IP=$1
 
-# Create systemd Service File
+# Update systemd service
 cd /etc/systemd/system
-echo "Starting sx-node service..."
-echo "
-	[Unit]
-	Description=SX Node Service
-	[Service]
-	Type=simple
-	Restart=always
-	RestartSec=1
-	User=$USER
-	Group=$USER
-	WorkingDirectory=/home/$USER/validator
-	ExecStart=/home/$USER/validator/sx-node/main server --data-dir /home/$USER/validator/sx-node/mynode --chain /home/$USER/validator/sx-node/genesis.json --grpc 0.0.0.0:10000 --libp2p 0.0.0.0:10001 --jsonrpc 0.0.0.0:10002 --nat $EC2_PUBLIC_IP --seal
-	[Install]
-	WantedBy=multi-user.target
-" | sudo tee sx-node.service
-
+echo "[Unit]
+Description=SX Node Service
+After=network.target
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=$USER
+LimitNOFILE=100000
+WorkingDirectory=/home/$USER/validator/sx-node
+ExecStart=/home/$USER/validator/sx-node/main server --config config.yml
+[Install]
+WantedBy=multi-user.target" | sudo tee sx-node.service
 if grep -q ForwardToSyslog=yes "/etc/systemd/journald.conf"; then
   sudo sed -i '/#ForwardToSyslog=yes/c\ForwardToSyslog=no' /etc/systemd/journald.conf
   sudo sed -i '/ForwardToSyslog=yes/c\ForwardToSyslog=no' /etc/systemd/journald.conf
@@ -29,7 +26,26 @@ fi
 cd -
 echo
 
+# Update config
+cd /home/$USER/validator/sx-node
+echo "chain_config: /home/$USER/validator/sx-node/genesis.json
+data_dir: /home/$USER/validator/sx-node/data
+block_gas_target: 0x3938700
+grpc_addr: 0.0.0.0:10000
+jsonrpc_addr: 0.0.0.0:10002
+network:
+  libp2p_addr: 0.0.0.0:10001
+  nat_addr: $EC2_PUBLIC_IP
+seal: true
+tx_pool:
+  price_limit: 1000000000
+log_level: DEBUG
+gasprice_block_utilization_threshold: 0.95
+data_feed:
+  verify_outcome_api_url: https://outcome-reporter.sx.technology/api/outcome" | sudo tee config.yml
+
 # Start systemd Service
+echo "Starting sx-node service..."
 sudo systemctl force-reload systemd-journald
 sudo systemctl daemon-reload
 sudo systemctl start sx-node.service
