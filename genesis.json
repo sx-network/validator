@@ -3,7 +3,7 @@
     "genesis": {
         "nonce": "0x0000000000000000",
         "timestamp": "0x0",
-        "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000f86df86994033a47156dd82cddb2fd426b80088a9ae6101ac59438fcbebc15a6d9091082c369d0734b2fbc7d455c94c3e0c7fc6543cdf478f15a842fe0c1a2c3b516f69497b73c76af21704bd3ee2c1dc28f6aa015a203a69425bafc38a950837e0ccb49d10e0e98cce6cc8a4480c0",
+        "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000f858f85494a3a585c6d59cce6aae7035e8df48b3327cc8be54947eff16a34e3433182d636488bc97919b10283f37943e64f88c6c7a1310236b242180c0ba1409d10f4d949cde4f11ea57163023a9a8a5df499b27813639eb80c0",
         "gasLimit": "0x500000",
         "difficulty": "0x1",
         "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
@@ -30,7 +30,127 @@
         },
         "chainID": 647,
         "engine": {
-            "ibft": {}
+            "ibft": {
+                "epochSize": 100,
+                "quorumSizeBlockNum": 4032700,
+                "types": [
+                    {
+                        "type": "PoA",
+                        "validator_type": "ecdsa",
+                        "from": "0x0",
+                        "to": "0x5db"
+                    },
+                    {
+                        "type": "PoS",
+                        "validator_type": "ecdsa",
+                        "deployment": "0x514",
+                        "from": "0x5dc",
+                        "to": "0x5c7cf3"
+                    },
+                    {
+                        "type": "PoS",
+                        "validator_type": "ecdsa",
+                        "from": "0x5c7cf4",
+                        "to": "0x6dce27"
+                    },
+                    {
+                        "type": "PoA",
+                        "validator_type": "ecdsa",
+                        "from": "0x6dce28",
+                        "to": "0x9cc727"
+                    },
+                    {
+                        "type": "PoA",
+                        "validator_type": "ecdsa",
+                        "from": "0x9cc728",
+                        "to": "0x9cd217",
+                        "validators": [
+                            {
+                                "Address": "0xA3a585c6d59CCE6aAe7035e8df48b3327cC8BE54"
+                            },
+                            {
+                                "Address": "0x7EFF16a34e3433182D636488bc97919b10283F37"
+                            },
+                            {
+                                "Address": "0x9cde4F11EA57163023A9a8a5dF499b27813639EB"
+                            },
+                            {
+                                "Address": "0x3e64F88C6C7a1310236B242180c0Ba1409d10F4d"
+                            }
+                        ],
+                        "customContractAddress": "0x714196d24c463cba2E33aAc94eFEE8f79EF9ce29",
+                        "forkEpochSize": 50
+                    },
+                    {
+                        "type": "PoA",
+                        "validator_type": "ecdsa",
+                        "from": "0x9cd218",
+                        "to": "0xacc9fb",
+                        "validators": [
+                            {
+                                "Address": "0xA3a585c6d59CCE6aAe7035e8df48b3327cC8BE54"
+                            },
+                            {
+                                "Address": "0x7EFF16a34e3433182D636488bc97919b10283F37"
+                            },
+                            {
+                                "Address": "0x9cde4F11EA57163023A9a8a5dF499b27813639EB"
+                            },
+                            {
+                                "Address": "0x3e64F88C6C7a1310236B242180c0Ba1409d10F4d"
+                            },
+                            {
+                                "Address": "0x6c230a5f8dd3413aA04e0860dD225F887b36f101"
+                            }
+                        ],
+                        "customContractAddress": "0x714196d24c463cba2E33aAc94eFEE8f79EF9ce29",
+                        "forkEpochSize": 100
+                    },
+                    {
+                        "type": "PoA",
+                        "validator_type": "ecdsa",
+                        "from": "0xacc9fc",
+                        "to": "0xcf36df",
+                        "validators": [
+                            {
+                                "Address": "0xA3a585c6d59CCE6aAe7035e8df48b3327cC8BE54"
+                            },
+                            {
+                                "Address": "0x7EFF16a34e3433182D636488bc97919b10283F37"
+                            },
+                            {
+                                "Address": "0x9cde4F11EA57163023A9a8a5dF499b27813639EB"
+                            },
+                            {
+                                "Address": "0x3e64F88C6C7a1310236B242180c0Ba1409d10F4d"
+                            }
+                        ],
+                        "customContractAddress": "0xD46fce6e7A1580eCD51Be9e35334a19A920C8e42",
+                        "forkEpochSize": 100
+                    },
+                    {
+                        "type": "PoA",
+                        "validator_type": "ecdsa",
+                        "from": "0xcf36e0",
+                        "validators": [
+                            {
+                                "Address": "0xA3a585c6d59CCE6aAe7035e8df48b3327cC8BE54"
+                            },
+                            {
+                                "Address": "0x7EFF16a34e3433182D636488bc97919b10283F37"
+                            },
+                            {
+                                "Address": "0x9cde4F11EA57163023A9a8a5dF499b27813639EB"
+                            },
+                            {
+                                "Address": "0x3e64F88C6C7a1310236B242180c0Ba1409d10F4d"
+                            }
+                        ],
+                        "customContractAddress": "0x8A4c25B8e43a4fee228dae3e5ecbfd7ea05125D4",
+                        "forkEpochSize": 100
+                    }
+                ]
+            }
         },
         "blockGasTarget": 0
     },
