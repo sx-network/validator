@@ -1,163 +1,204 @@
 {
-    "name": "sx-toronto",
-    "genesis": {
-        "nonce": "0x0000000000000000",
-        "timestamp": "0x0",
-        "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000f858f85494a3a585c6d59cce6aae7035e8df48b3327cc8be54947eff16a34e3433182d636488bc97919b10283f37943e64f88c6c7a1310236b242180c0ba1409d10f4d949cde4f11ea57163023a9a8a5df499b27813639eb80c0",
-        "gasLimit": "0x500000",
-        "difficulty": "0x1",
-        "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-        "coinbase": "0x0000000000000000000000000000000000000000",
-        "alloc": {
-            "0x4FAC0232243D2C863EF7787e0cb9c9118048d60e": {
-                "balance": "0x33b2e3c9fd0803ce8000000"
-            }
-        },
-        "number": "0x0",
-        "gasUsed": "0x70000",
-        "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+  "name": "sx-toronto",
+  "genesis": {
+    "nonce": "0x0000000000000000",
+    "timestamp": "0x0",
+    "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000f858f85494a3a585c6d59cce6aae7035e8df48b3327cc8be54947eff16a34e3433182d636488bc97919b10283f37943e64f88c6c7a1310236b242180c0ba1409d10f4d949cde4f11ea57163023a9a8a5df499b27813639eb80c0",
+    "gasLimit": "0x500000",
+    "difficulty": "0x1",
+    "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "coinbase": "0x0000000000000000000000000000000000000000",
+    "alloc": {
+      "0x4FAC0232243D2C863EF7787e0cb9c9118048d60e": {
+        "balance": "0x33b2e3c9fd0803ce8000000"
+      }
     },
-    "params": {
-        "forks": {
-            "homestead": 0,
-            "byzantium": 0,
-            "constantinople": 0,
-            "petersburg": 0,
-            "istanbul": 0,
-            "EIP150": 0,
-            "EIP158": 0,
-            "EIP155": 0
-        },
-        "chainID": 647,
-        "engine": {
-            "ibft": {
-                "epochSize": 100,
-                "quorumSizeBlockNum": 4032700,
-                "types": [
+    "number": "0x0",
+    "gasUsed": "0x70000",
+    "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "params": {
+    "forks": {
+      "homestead": 0,
+      "byzantium": 0,
+      "constantinople": 0,
+      "petersburg": 0,
+      "istanbul": 0,
+      "EIP150": 0,
+      "EIP158": 0,
+      "EIP155": 0
+    },
+    "chainID": 647,
+    "engine": {
+      "ibft": {
+        "epochSize": 100,
+        "quorumSizeBlockNum": 4032700,
+        "types": [
+            {
+                "type": "PoA",
+                "validator_type": "ecdsa",
+                "from": "0x0",
+                "to": "0x5db"
+            },
+            {
+                "type": "PoS",
+                "validator_type": "ecdsa",
+                "deployment": "0x514",
+                "from": "0x5dc",
+                "to": "0x5c7cf3"
+            },
+            {
+                "type": "PoS",
+                "validator_type": "ecdsa",
+                "from": "0x5c7cf4",
+                "to": "0x6dce27",
+                "customContractAddress": "0xB3517FD72eBF834C6f522FD39A4729e6802e6757"
+            },
+            {
+                "type": "PoA",
+                "validator_type": "ecdsa",
+                "from": "0x6dce28",
+                "to": "0x9cc727"
+            },
+            {
+                "type": "PoA",
+                "validator_type": "ecdsa",
+                "from": "0x9cc728",
+                "to": "0x9cd217",
+                "validators": [
                     {
-                        "type": "PoA",
-                        "validator_type": "ecdsa",
-                        "from": "0x0",
-                        "to": "0x5db"
+                        "Address": "0xA3a585c6d59CCE6aAe7035e8df48b3327cC8BE54"
                     },
                     {
-                        "type": "PoS",
-                        "validator_type": "ecdsa",
-                        "deployment": "0x514",
-                        "from": "0x5dc",
-                        "to": "0x5c7cf3"
+                        "Address": "0x7EFF16a34e3433182D636488bc97919b10283F37"
                     },
                     {
-                        "type": "PoS",
-                        "validator_type": "ecdsa",
-                        "from": "0x5c7cf4",
-                        "to": "0x6dce27"
+                        "Address": "0x9cde4F11EA57163023A9a8a5dF499b27813639EB"
                     },
                     {
-                        "type": "PoA",
-                        "validator_type": "ecdsa",
-                        "from": "0x6dce28",
-                        "to": "0x9cc727"
-                    },
-                    {
-                        "type": "PoA",
-                        "validator_type": "ecdsa",
-                        "from": "0x9cc728",
-                        "to": "0x9cd217",
-                        "validators": [
-                            {
-                                "Address": "0xA3a585c6d59CCE6aAe7035e8df48b3327cC8BE54"
-                            },
-                            {
-                                "Address": "0x7EFF16a34e3433182D636488bc97919b10283F37"
-                            },
-                            {
-                                "Address": "0x9cde4F11EA57163023A9a8a5dF499b27813639EB"
-                            },
-                            {
-                                "Address": "0x3e64F88C6C7a1310236B242180c0Ba1409d10F4d"
-                            }
-                        ],
-                        "customContractAddress": "0x714196d24c463cba2E33aAc94eFEE8f79EF9ce29",
-                        "forkEpochSize": 50
-                    },
-                    {
-                        "type": "PoA",
-                        "validator_type": "ecdsa",
-                        "from": "0x9cd218",
-                        "to": "0xacc9fb",
-                        "validators": [
-                            {
-                                "Address": "0xA3a585c6d59CCE6aAe7035e8df48b3327cC8BE54"
-                            },
-                            {
-                                "Address": "0x7EFF16a34e3433182D636488bc97919b10283F37"
-                            },
-                            {
-                                "Address": "0x9cde4F11EA57163023A9a8a5dF499b27813639EB"
-                            },
-                            {
-                                "Address": "0x3e64F88C6C7a1310236B242180c0Ba1409d10F4d"
-                            },
-                            {
-                                "Address": "0x6c230a5f8dd3413aA04e0860dD225F887b36f101"
-                            }
-                        ],
-                        "customContractAddress": "0x714196d24c463cba2E33aAc94eFEE8f79EF9ce29",
-                        "forkEpochSize": 100
-                    },
-                    {
-                        "type": "PoA",
-                        "validator_type": "ecdsa",
-                        "from": "0xacc9fc",
-                        "to": "0xcf36df",
-                        "validators": [
-                            {
-                                "Address": "0xA3a585c6d59CCE6aAe7035e8df48b3327cC8BE54"
-                            },
-                            {
-                                "Address": "0x7EFF16a34e3433182D636488bc97919b10283F37"
-                            },
-                            {
-                                "Address": "0x9cde4F11EA57163023A9a8a5dF499b27813639EB"
-                            },
-                            {
-                                "Address": "0x3e64F88C6C7a1310236B242180c0Ba1409d10F4d"
-                            }
-                        ],
-                        "customContractAddress": "0xD46fce6e7A1580eCD51Be9e35334a19A920C8e42",
-                        "forkEpochSize": 100
-                    },
-                    {
-                        "type": "PoA",
-                        "validator_type": "ecdsa",
-                        "from": "0xcf36e0",
-                        "validators": [
-                            {
-                                "Address": "0xA3a585c6d59CCE6aAe7035e8df48b3327cC8BE54"
-                            },
-                            {
-                                "Address": "0x7EFF16a34e3433182D636488bc97919b10283F37"
-                            },
-                            {
-                                "Address": "0x9cde4F11EA57163023A9a8a5dF499b27813639EB"
-                            },
-                            {
-                                "Address": "0x3e64F88C6C7a1310236B242180c0Ba1409d10F4d"
-                            }
-                        ],
-                        "customContractAddress": "0x8A4c25B8e43a4fee228dae3e5ecbfd7ea05125D4",
-                        "forkEpochSize": 100
+                        "Address": "0x3e64F88C6C7a1310236B242180c0Ba1409d10F4d"
                     }
-                ]
-            }
-        },
-        "blockGasTarget": 0
+                ],
+                "customContractAddress": "0x714196d24c463cba2E33aAc94eFEE8f79EF9ce29",
+                "forkEpochSize": 50
+            },
+            {
+                "type": "PoA",
+                "validator_type": "ecdsa",
+                "from": "0x9cd218",
+                "validators": [
+                    {
+                        "Address": "0xA3a585c6d59CCE6aAe7035e8df48b3327cC8BE54"
+                    },
+                    {
+                        "Address": "0x7EFF16a34e3433182D636488bc97919b10283F37"
+                    },
+                    {
+                        "Address": "0x9cde4F11EA57163023A9a8a5dF499b27813639EB"
+                    },
+                    {
+                        "Address": "0x3e64F88C6C7a1310236B242180c0Ba1409d10F4d"
+                    },
+                    {
+                        "Address": "0x6c230a5f8dd3413aA04e0860dD225F887b36f101"
+                    }
+                ],
+                "customContractAddress": "0x714196d24c463cba2E33aAc94eFEE8f79EF9ce29",
+                "forkEpochSize": 100
+            },
+            {
+              "type": "PoA",
+              "validator_type": "ecdsa",
+              "from": "0xacc9fc",
+              "validators": [
+                  {
+                      "Address": "0xA3a585c6d59CCE6aAe7035e8df48b3327cC8BE54"
+                  },
+                  {
+                      "Address": "0x7EFF16a34e3433182D636488bc97919b10283F37"
+                  },
+                  {
+                      "Address": "0x9cde4F11EA57163023A9a8a5dF499b27813639EB"
+                  },
+                  {
+                      "Address": "0x3e64F88C6C7a1310236B242180c0Ba1409d10F4d"
+                  }
+              ],
+              "customContractAddress": "0xD46fce6e7A1580eCD51Be9e35334a19A920C8e42",
+              "forkEpochSize": 100
+          },
+          {
+            "type": "PoA",
+            "validator_type": "ecdsa",
+            "from": "0xcf36e0",
+            "validators": [
+                {
+                    "Address": "0xA3a585c6d59CCE6aAe7035e8df48b3327cC8BE54"
+                },
+                {
+                    "Address": "0x7EFF16a34e3433182D636488bc97919b10283F37"
+                },
+                {
+                    "Address": "0x9cde4F11EA57163023A9a8a5dF499b27813639EB"
+                },
+                {
+                    "Address": "0x3e64F88C6C7a1310236B242180c0Ba1409d10F4d"
+                }
+            ],
+            "customContractAddress": "0x8A4c25B8e43a4fee228dae3e5ecbfd7ea05125D4",
+            "forkEpochSize": 100
+          },
+          {
+            "type": "PoA",
+            "validator_type": "ecdsa",
+            "from": "0xfb9064",
+            "validators": [
+                {
+                    "Address": "0xA3a585c6d59CCE6aAe7035e8df48b3327cC8BE54"
+                },
+                {
+                    "Address": "0x7EFF16a34e3433182D636488bc97919b10283F37"
+                },
+                {
+                    "Address": "0x9cde4F11EA57163023A9a8a5dF499b27813639EB"
+                },
+                {
+                    "Address": "0x3e64F88C6C7a1310236B242180c0Ba1409d10F4d"
+                }
+            ],
+            "customContractAddress": "0xA20997fD757DA8b132aC4D10898Da0C1340b10e3",
+            "forkEpochSize": 100
+          },
+          {
+            "type": "PoA",
+            "validator_type": "ecdsa",
+            "from": "0x1153f00",
+            "validators": [
+                {
+                    "Address": "0xA3a585c6d59CCE6aAe7035e8df48b3327cC8BE54"
+                },
+                {
+                    "Address": "0x7EFF16a34e3433182D636488bc97919b10283F37"
+                },
+                {
+                    "Address": "0x9cde4F11EA57163023A9a8a5dF499b27813639EB"
+                },
+                {
+                    "Address": "0x3e64F88C6C7a1310236B242180c0Ba1409d10F4d"
+                }
+            ],
+            "customContractAddress": "0x8Fc0d3e8f4E7464e4Bf1feb66070D15ff494e587",
+            "forkEpochSize": 100
+          }
+        ]
+      }
     },
-    "bootnodes": [
-        "/ip4/3.215.13.226/tcp/10001/p2p/16Uiu2HAmP2bpgr3sLUUzt61bEzAL7ptdNXnvsfnwcxyrfCMFjxDf",
-        "/ip4/3.84.231.38/tcp/10001/p2p/16Uiu2HAmTvfiVHL6v7V9JmLdkM4jHHTWC34mMHqYDdw4HhLoFTYD",
-        "/ip4/34.207.228.138/tcp/10001/p2p/16Uiu2HAmFpTiQcctV2KNpdKm9FehHKFLTUC13oaBGVzvZta7iFMc",
-        "/ip4/204.236.222.207/tcp/10001/p2p/16Uiu2HAmERLox5fG95J9SRrrv8YQ1oEMF5XxU5L5Ew1VyXa3qrHF"
-    ]
+    "blockGasTarget": 0
+  },
+  "bootnodes": [
+    "/dns/validator-1.toronto.sx.technology/tcp/10001/p2p/16Uiu2HAmVWJ7TDHtyoJtSXuDgS8mKvUwWWxzxjTsTTFRU31D6xNA",
+    "/dns/validator-2.toronto.sx.technology/tcp/10001/p2p/16Uiu2HAmVMCHTqD6Xe1KescA6yt8raf13TAgxiWYKRQV3k1jZR7z",
+    "/dns/validator-3.toronto.sx.technology/tcp/10001/p2p/16Uiu2HAm8fbLe2utrGKrBZ3mArgQRAyuAZXY9C6FV3tL3UtnEVBw",
+    "/dns/validator-4.toronto.sx.technology/tcp/10001/p2p/16Uiu2HAm6yfKYWJncEh8SBtt1ptsavc4M1fySpc8ZKDm8wE9hp3x"
+  ]
 }
