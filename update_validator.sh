@@ -31,11 +31,14 @@ network:
   nat_addr: $EC2_PUBLIC_IP
 seal: true
 tx_pool:
-  price_limit: 1000000000
+  price_limit: 20000000000
 log_level: DEBUG
 gasprice_block_utilization_threshold: 0.95
 data_feed:
-  verify_outcome_api_url: https://outcome-reporter.sx.technology/api/outcome" | sudo tee config.yml
+  verify_outcome_api_url: https://outcome-reporter.sx.technology/api/outcome
+  sx_node_address: 0xb2EA86f774CC455bb3BD1Cea73851BF3D2467778
+  outcome_reporter_address: 0x041670fF3FfdA1Da64BF54b5aE009eda19BaB8a3
+  outcome_voting_period_seconds: 240" | sudo tee config.yml
 
 # Update genesis
 cp ../genesis.json . && chmod +x genesis.json
