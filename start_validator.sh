@@ -42,7 +42,10 @@ tx_pool:
 log_level: DEBUG
 gasprice_block_utilization_threshold: 0.95
 data_feed:
-  verify_outcome_api_url: https://outcome-reporter.sx.technology/api/outcome" | sudo tee config.yml
+  outcome_voting_period_seconds: 30
+  sx_node_address: 0x735BbCDC7A3e39102bE657cC0a4eAb38f206DaF3
+  outcome_reporter_address: 0x55b3d7c853aD2382f1c62dEc70056BD301CE5098
+  verify_outcome_api_url: https://outcome-reporter.toronto.sx.technology/api/outcome" | sudo tee config.yml
 
 # Start systemd Service
 echo "Starting sx-node service..."
