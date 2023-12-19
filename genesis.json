@@ -189,7 +189,136 @@
             ],
             "customContractAddress": "0x8Fc0d3e8f4E7464e4Bf1feb66070D15ff494e587",
             "forkEpochSize": 100
-          }
+          },
+          {
+                        "type": "PoA",
+                        "validator_type": "ecdsa",
+                        "from": "0x128b9b8",
+                        "to": "0x12c9023",
+                        "validators": [
+                            {
+                                "Address": "0xA3a585c6d59CCE6aAe7035e8df48b3327cC8BE54"
+                            },
+                            {
+                                "Address": "0x7EFF16a34e3433182D636488bc97919b10283F37"
+                            },
+                            {
+                                "Address": "0x9cde4F11EA57163023A9a8a5dF499b27813639EB"
+                            },
+                            {
+                                "Address": "0x3e64F88C6C7a1310236B242180c0Ba1409d10F4d"
+                            }
+                        ],
+                        "customContractAddress": "0xa495C0D5EAC31eF02f4dDFeaD88985F64439870C",
+                        "forkEpochSize": 100
+                    },
+                    {
+                        "type": "PoA",
+                        "validator_type": "ecdsa",
+                        "from": "0x12c9024",
+                        "to": "0x139fe6b",
+                        "validators": [
+                            {
+                                "Address": "0xA3a585c6d59CCE6aAe7035e8df48b3327cC8BE54"
+                            },
+                            {
+                                "Address": "0x7EFF16a34e3433182D636488bc97919b10283F37"
+                            },
+                            {
+                                "Address": "0x9cde4F11EA57163023A9a8a5dF499b27813639EB"
+                            },
+                            {
+                                "Address": "0x3e64F88C6C7a1310236B242180c0Ba1409d10F4d"
+                            }
+                        ],
+                        "customContractAddress": "0xaEc31DaA0D04b3796a86eb767938360Ad052DB39",
+                        "forkEpochSize": 100
+                    },
+                    {
+                        "type": "PoA",
+                        "validator_type": "ecdsa",
+                        "from": "0x139fe6c",
+                        "to": "0x150e86f",
+                        "validators": [
+                            {
+                                "Address": "0xA3a585c6d59CCE6aAe7035e8df48b3327cC8BE54"
+                            },
+                            {
+                                "Address": "0x7EFF16a34e3433182D636488bc97919b10283F37"
+                            },
+                            {
+                                "Address": "0x9cde4F11EA57163023A9a8a5dF499b27813639EB"
+                            },
+                            {
+                                "Address": "0x3e64F88C6C7a1310236B242180c0Ba1409d10F4d"
+                            }
+                        ],
+                        "customContractAddress": "0x3973C2B076E40231D55F2CE62575d98E7E9e7A12",
+                        "forkEpochSize": 100
+                    },
+                    {
+                        "type": "PoA",
+                        "validator_type": "ecdsa",
+                        "from": "0x150e870",
+                        "to": "0x150f233",
+                        "validators": [
+                            {
+                                "Address": "0xA3a585c6d59CCE6aAe7035e8df48b3327cC8BE54"
+                            },
+                            {
+                                "Address": "0x7EFF16a34e3433182D636488bc97919b10283F37"
+                            },
+                            {
+                                "Address": "0x9cde4F11EA57163023A9a8a5dF499b27813639EB"
+                            },
+                            {
+                                "Address": "0x3e64F88C6C7a1310236B242180c0Ba1409d10F4d"
+                            }
+                        ],
+                        "customContractAddress": "0xb23e59E012c9b9F03f22544Cbb1e8f1112F64db2",
+                        "forkEpochSize": 100
+                    },
+                    {
+                        "type": "PoA",
+                        "validator_type": "ecdsa",
+                        "from": "0x150f234",
+                        "to": "0x185178f",
+                        "validators": [
+                            {
+                                "Address": "0xA3a585c6d59CCE6aAe7035e8df48b3327cC8BE54"
+                            },
+                            {
+                                "Address": "0x7EFF16a34e3433182D636488bc97919b10283F37"
+                            },
+                            {
+                                "Address": "0x9cde4F11EA57163023A9a8a5dF499b27813639EB"
+                            },
+                            {
+                                "Address": "0x3e64F88C6C7a1310236B242180c0Ba1409d10F4d"
+                            }
+                        ],
+                        "customContractAddress": "0x3973C2B076E40231D55F2CE62575d98E7E9e7A12",
+                        "forkEpochSize": 100
+                    },
+                    {
+                        "type": "PoA",
+                        "validator_type": "ecdsa",
+                        "from": "0x1851790",
+                        "validators": [
+                            {
+                                "Address": "0xA3a585c6d59CCE6aAe7035e8df48b3327cC8BE54"
+                            },
+                            {
+                                "Address": "0x7EFF16a34e3433182D636488bc97919b10283F37"
+                            },
+                            {
+                                "Address": "0x9cde4F11EA57163023A9a8a5dF499b27813639EB"
+                            },
+                            {
+                                "Address": "0x3e64F88C6C7a1310236B242180c0Ba1409d10F4d"
+                            }
+                        ]
+                    }
         ]
       }
     },
