@@ -38,7 +38,6 @@ data_feed:
   verify_outcome_api_url: https://outcome-reporter.sx.technology/api/outcome
   sx_node_address: 0xb2EA86f774CC455bb3BD1Cea73851BF3D2467778
   outcome_reporter_address: 0x041670fF3FfdA1Da64BF54b5aE009eda19BaB8a3
-  outcome_voting_period_seconds: 30" | sudo tee config.yml
 
 # Update genesis
 cp ../genesis.json . && chmod +x genesis.json
